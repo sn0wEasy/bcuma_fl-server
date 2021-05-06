@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 
+  Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css"
+        href="{{ staticfile('style.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ staticfile('procedure.css') }}">
+    <title>FL-Server</title>
+</head>
+
+<body>
+    <h1>FL-Server</h1>
+    <p><b>FL-Server User ID: {{ uid }}</b></p>
+    <p>Upload the delta obtained from training the machine learning model to the FL-Server and set the authorization policy.</p>
+    <p>{{ name }} is successfully uploaded!</p>
+    <br>
+    <h3>Go to the PAT issuing endpoint and issue a PAT.</h3>
+    <form action="/redirect-pat" method="post">
+        <button type="submit" value="redirect-pat">Issue PAT</button>
+    </form>
+    <br>
+    <br>
+    <blockquote>
+        <u>Procedure 02</u><br>
+        Submission of the model delta has been completed.
+        On the next page, perform the preparations to protect the submitted model deltas using the Authorization Blockchain.
+        In other words, the FL-Submitter generates an access token called PAT on the Authorization Blockchain and grants it to the FL-Server.<br>
+    </blockquote>
+
+    <p><img src="/static/images/rreg02.png" width="673" height="400"></p>
+</body>
+
+</html>
